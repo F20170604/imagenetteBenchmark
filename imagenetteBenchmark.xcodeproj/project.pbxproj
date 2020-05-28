@@ -3,11 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		389B0047247F678900D27828 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B0046247F678900D27828 /* main.swift */; };
+		389B0050247F67D200D27828 /* Benchmark in Frameworks */ = {isa = PBXBuildFile; productRef = 389B004F247F67D200D27828 /* Benchmark */; };
+		389B0053247F693600D27828 /* VideoClassificationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0052247F693600D27828 /* VideoClassificationModels */; };
+		389B0055247F693600D27828 /* ImageClassificationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0054247F693600D27828 /* ImageClassificationModels */; };
+		389B0057247F693600D27828 /* MiniGo in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0056247F693600D27828 /* MiniGo */; };
+		389B0059247F693600D27828 /* ModelSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0058247F693600D27828 /* ModelSupport */; };
+		389B005B247F693600D27828 /* Batcher in Frameworks */ = {isa = PBXBuildFile; productRef = 389B005A247F693600D27828 /* Batcher */; };
+		389B005D247F693600D27828 /* FastStyleTransfer in Frameworks */ = {isa = PBXBuildFile; productRef = 389B005C247F693600D27828 /* FastStyleTransfer */; };
+		389B005F247F693600D27828 /* RecommendationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B005E247F693600D27828 /* RecommendationModels */; };
+		389B0061247F693600D27828 /* Datasets in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0060247F693600D27828 /* Datasets */; };
+		389B0063247F693600D27828 /* TextModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0062247F693600D27828 /* TextModels */; };
+		389B0066247F69CF00D27828 /* pilBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B0065247F69CF00D27828 /* pilBenchmark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +36,8 @@
 /* Begin PBXFileReference section */
 		389B0043247F678900D27828 /* imagenetteBenchmark */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = imagenetteBenchmark; sourceTree = BUILT_PRODUCTS_DIR; };
 		389B0046247F678900D27828 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		389B004D247F679300D27828 /* imagenetteBenchmark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imagenetteBenchmark.entitlements; sourceTree = "<group>"; };
+		389B0065247F69CF00D27828 /* pilBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pilBenchmark.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389B005B247F693600D27828 /* Batcher in Frameworks */,
+				389B0063247F693600D27828 /* TextModels in Frameworks */,
+				389B0055247F693600D27828 /* ImageClassificationModels in Frameworks */,
+				389B0061247F693600D27828 /* Datasets in Frameworks */,
+				389B0057247F693600D27828 /* MiniGo in Frameworks */,
+				389B0053247F693600D27828 /* VideoClassificationModels in Frameworks */,
+				389B005D247F693600D27828 /* FastStyleTransfer in Frameworks */,
+				389B005F247F693600D27828 /* RecommendationModels in Frameworks */,
+				389B0059247F693600D27828 /* ModelSupport in Frameworks */,
+				389B0050247F67D200D27828 /* Benchmark in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +66,7 @@
 			children = (
 				389B0045247F678900D27828 /* imagenetteBenchmark */,
 				389B0044247F678900D27828 /* Products */,
+				389B0064247F694300D27828 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +81,18 @@
 		389B0045247F678900D27828 /* imagenetteBenchmark */ = {
 			isa = PBXGroup;
 			children = (
+				389B004D247F679300D27828 /* imagenetteBenchmark.entitlements */,
 				389B0046247F678900D27828 /* main.swift */,
+				389B0065247F69CF00D27828 /* pilBenchmark.swift */,
 			);
 			path = imagenetteBenchmark;
+			sourceTree = "<group>";
+		};
+		389B0064247F694300D27828 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +111,18 @@
 			dependencies = (
 			);
 			name = imagenetteBenchmark;
+			packageProductDependencies = (
+				389B004F247F67D200D27828 /* Benchmark */,
+				389B0052247F693600D27828 /* VideoClassificationModels */,
+				389B0054247F693600D27828 /* ImageClassificationModels */,
+				389B0056247F693600D27828 /* MiniGo */,
+				389B0058247F693600D27828 /* ModelSupport */,
+				389B005A247F693600D27828 /* Batcher */,
+				389B005C247F693600D27828 /* FastStyleTransfer */,
+				389B005E247F693600D27828 /* RecommendationModels */,
+				389B0060247F693600D27828 /* Datasets */,
+				389B0062247F693600D27828 /* TextModels */,
+			);
 			productName = imagenetteBenchmark;
 			productReference = 389B0043247F678900D27828 /* imagenetteBenchmark */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +151,10 @@
 				Base,
 			);
 			mainGroup = 389B003A247F678800D27828;
+			packageReferences = (
+				389B004E247F67D200D27828 /* XCRemoteSwiftPackageReference "swift-benchmark" */,
+				389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */,
+			);
 			productRefGroup = 389B0044247F678900D27828 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -121,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				389B0047247F678900D27828 /* main.swift in Sources */,
+				389B0066247F69CF00D27828 /* pilBenchmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +293,7 @@
 		389B004B247F678900D27828 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = imagenetteBenchmark/imagenetteBenchmark.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B298T8UF7G;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -254,6 +305,7 @@
 		389B004C247F678900D27828 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = imagenetteBenchmark/imagenetteBenchmark.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B298T8UF7G;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -284,6 +336,78 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		389B004E247F67D200D27828 /* XCRemoteSwiftPackageReference "swift-benchmark" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/swift-benchmark";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/tensorflow/swift-models";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		389B004F247F67D200D27828 /* Benchmark */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B004E247F67D200D27828 /* XCRemoteSwiftPackageReference "swift-benchmark" */;
+			productName = Benchmark;
+		};
+		389B0052247F693600D27828 /* VideoClassificationModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = VideoClassificationModels;
+		};
+		389B0054247F693600D27828 /* ImageClassificationModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = ImageClassificationModels;
+		};
+		389B0056247F693600D27828 /* MiniGo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = MiniGo;
+		};
+		389B0058247F693600D27828 /* ModelSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = ModelSupport;
+		};
+		389B005A247F693600D27828 /* Batcher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = Batcher;
+		};
+		389B005C247F693600D27828 /* FastStyleTransfer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = FastStyleTransfer;
+		};
+		389B005E247F693600D27828 /* RecommendationModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = RecommendationModels;
+		};
+		389B0060247F693600D27828 /* Datasets */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = Datasets;
+		};
+		389B0062247F693600D27828 /* TextModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = TextModels;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 389B003B247F678900D27828 /* Project object */;
 }
