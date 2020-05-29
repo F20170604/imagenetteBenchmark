@@ -20,7 +20,7 @@ let datasetPath = "/Users/ayush517/imagenette2-160"
 let trainDatasetPath = "/Users/ayush517/imagenette2-160/train"
 let valDatasetPath = "/Users/ayush517/imagenette2-160/val"
 
-let classNames = ["n01440764", "n02102040", "n02979186", "n03000684", "n03028079",
+let classNames = ["n01440764", "n02102040", "n02979186", "n03000684", "n0328079",
 "n03394916", "n03417042", "n03425413", "n03445777", "n03888257"]
 
 func getTensor(fromPath: String) -> (Tensor<Float>, Int32) {
@@ -35,7 +35,7 @@ func getTensor(fromPath: String) -> (Tensor<Float>, Int32) {
     }
     
     imageTensor = imageTensor.expandingShape(at: 0)
-    imageTensor = _Raw.resizeArea(images: imageTensor , size: [64, 64])
+    imageTensor = _Raw.resizeArea(images: imageTensor , size: [160, 160])
     
     var label: Int32 = 0
 
