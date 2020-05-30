@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387A5C2E2481DF2C007D9B0F /* subsetImagenette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */; };
 		389B0047247F678900D27828 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B0046247F678900D27828 /* main.swift */; };
 		389B0050247F67D200D27828 /* Benchmark in Frameworks */ = {isa = PBXBuildFile; productRef = 389B004F247F67D200D27828 /* Benchmark */; };
 		389B0053247F693600D27828 /* VideoClassificationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0052247F693600D27828 /* VideoClassificationModels */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subsetImagenette.swift; sourceTree = "<group>"; };
 		389B0043247F678900D27828 /* imagenetteBenchmark */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = imagenetteBenchmark; sourceTree = BUILT_PRODUCTS_DIR; };
 		389B0046247F678900D27828 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		389B004D247F679300D27828 /* imagenetteBenchmark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imagenetteBenchmark.entitlements; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				389B004D247F679300D27828 /* imagenetteBenchmark.entitlements */,
 				389B0046247F678900D27828 /* main.swift */,
 				389B0065247F69CF00D27828 /* pilBenchmark.swift */,
+				387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */,
 			);
 			path = imagenetteBenchmark;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387A5C2E2481DF2C007D9B0F /* subsetImagenette.swift in Sources */,
 				389B0047247F678900D27828 /* main.swift in Sources */,
 				389B0066247F69CF00D27828 /* pilBenchmark.swift in Sources */,
 			);
