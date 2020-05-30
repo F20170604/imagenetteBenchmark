@@ -16,9 +16,7 @@ let pil = Python.import("PIL")
 let pilImage = Python.import("PIL.Image")
 let pilImageOps = Python.import("PIL.ImageOps")
 
-let datasetPath = "/Users/ayush517/imagenette2-160"
-let trainDatasetPath = "/Users/ayush517/imagenette2-160/train"
-let valDatasetPath = "/Users/ayush517/imagenette2-160/val"
+let datasetPath = "/Users/ayush517/subsetImagenette"
 
 let classNames = ["n01440764", "n02102040", "n02979186", "n03000684", "n03028079",
 "n03394916", "n03417042", "n03425413", "n03445777", "n03888257"]

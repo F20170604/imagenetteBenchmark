@@ -12,7 +12,10 @@ import PythonKit
 let rnd = Python.import("random")
 let os = Python.import("os")
 let ospath = Python.import("os.path")
-let destinationDirectory = "/Users/ayush517/subsetImagenette/"
+let destinationDirectory = "/Users/ayush517/subsetImagenette"
+
+
+let originalDatasetPath = "/Users/ayush517/imagenette2-160"
 
 func createDataset(datasetType: String) -> PythonObject {
     
@@ -22,7 +25,7 @@ func createDataset(datasetType: String) -> PythonObject {
     
     for name in classNames[0..<10] {
         
-        let path = datasetPath+"/\(datasetType)/\(name)"
+        let path = originalDatasetPath+"/\(datasetType)/\(name)"
         let batchFiles = glob.glob(path+"/*.JPEG")
 
         rnd.shuffle(batchFiles)
@@ -34,7 +37,7 @@ func createDataset(datasetType: String) -> PythonObject {
             
             let channels = Python.len(img.getbands())
             
-            let destinationPath = "\(destinationDirectory)\(name)"
+            let destinationPath = "\(destinationDirectory)/\(datasetType)/\(name)"
             
             do
             {

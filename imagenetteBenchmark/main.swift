@@ -10,7 +10,9 @@ import Foundation
 
 print("Hello, World!")
 
-//let trainImages = loadImagenetteTrainingFiles()
-//print("Image Tensors Shape: \(trainImages.0.shape)")
-//print("Label Tensors Shape: \(trainImages.1.shape)")
+
 let newTrainPaths = createDataset(datasetType: "train")
+
+let trainImages = loadImagenetteTrainingFiles()
+print("Image Tensors Shape: \(trainImages.0.shape)")
+print("Label Tensors Shape: \(trainImages.1.shape)")
