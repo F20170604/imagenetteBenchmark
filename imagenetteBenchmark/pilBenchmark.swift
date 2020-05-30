@@ -16,18 +16,13 @@ let pil = Python.import("PIL")
 let pilImage = Python.import("PIL.Image")
 let pilImageOps = Python.import("PIL.ImageOps")
 
-let datasetPath = "/Users/ayush517/subsetImagenette"
-
-let classNames = ["n01440764", "n02102040", "n02979186", "n03000684", "n03028079",
-"n03394916", "n03417042", "n03425413", "n03445777", "n03888257"]
-
 func getTensor(fromPath: String) -> (Tensor<Float>, Int32) {
     let img = pilImage.open(fromPath)
     let image = np.array(img, dtype: np.float32) * (1.0 / 255)
     var imageTensor = Tensor<Float>(numpy: image)!
     
     imageTensor = imageTensor.expandingShape(at: 0)
-    imageTensor = _Raw.resizeArea(images: imageTensor , size: [160, 160])
+    imageTensor = _Raw.resizeArea(images: imageTensor , size: [320, 320])
     
     var label: Int32 = 0
 
