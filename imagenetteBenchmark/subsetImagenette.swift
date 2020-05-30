@@ -14,10 +14,9 @@ let os = Python.import("os")
 let ospath = Python.import("os.path")
 let destinationDirectory = "/Users/ayush517/subsetImagenette"
 
-
 let originalDatasetPath = "/Users/ayush517/imagenette2-160"
 
-func createDataset(datasetType: String) -> PythonObject {
+func createDataset(datasetType: String, numImagesPerClass: Int32) -> PythonObject {
     
     rnd.seed(42)
     var totalImagesDone : Int32 = 0
@@ -52,17 +51,17 @@ func createDataset(datasetType: String) -> PythonObject {
             let filePath = "\(destinationPath)/\(filename)"
             
             if channels == 3 {
-                print(imagePath)
+                //print(imagePath)
                 numberOfImagesDone = numberOfImagesDone + 1
                 totalImagesDone = totalImagesDone + 1
                 img.save(filePath)
                 finalList.append(filePath)
             }
-            if numberOfImagesDone == 100 {
+            if numberOfImagesDone == numImagesPerClass {
                 break
             }
         }
     }
-    print(totalImagesDone)
+    //print(totalImagesDone)
     return finalList
 }

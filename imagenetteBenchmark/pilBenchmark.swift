@@ -26,12 +26,6 @@ func getTensor(fromPath: String) -> (Tensor<Float>, Int32) {
     let image = np.array(img, dtype: np.float32) * (1.0 / 255)
     var imageTensor = Tensor<Float>(numpy: image)!
     
-    //print(imageTensor.shape.rank)
-    
-    if imageTensor.shape.rank != 3 {
-        return (imageTensor, -1)
-    }
-    
     imageTensor = imageTensor.expandingShape(at: 0)
     imageTensor = _Raw.resizeArea(images: imageTensor , size: [160, 160])
     
@@ -47,42 +41,58 @@ func getTensor(fromPath: String) -> (Tensor<Float>, Int32) {
     return (imageTensor, label)
 }
 
-func loadDataset(datasetType: String) -> (Tensor<Float>, Tensor<Int32>)  {
+func loadDataset(datasetPaths: [String]) -> (Tensor<Float>, Tensor<Int32>)  {
     
     var imageTensor: Tensor<Float>
     var labels: [Int32] = []
     
-    var path = "\(datasetPath)/\(datasetType)/n01440764"
-    
-    var imagePath = String(glob.glob(path+"/*.JPEG")[0])!
-    //print(imagePath)
-    var data = getTensor(fromPath: imagePath)
+    var data = getTensor(fromPath: datasetPaths[0])
     imageTensor = data.0
     labels.append(data.1)
     
-    for name in classNames[0..<10] {
-        path = datasetPath+"/\(datasetType)/\(name)"
-        let batchFiles = glob.glob(path+"/*.JPEG")
-
-        for file in batchFiles {
-            imagePath = String(file) ?? ""
-            print(imagePath)
-            data = getTensor(fromPath: imagePath)
-            if data.1 == -1 {
-                continue
-            }
-            let tensor = data.0
-            labels.append(data.1)
-            imageTensor = Tensor(concatenating: [imageTensor, tensor], alongAxis: 0)
-        }
+    for path in datasetPaths[1..<datasetPaths.count] {
+        //print(imagePath)
+        data = getTensor(fromPath: path)
+        let tensor = data.0
+        labels.append(data.1)
+        imageTensor = Tensor(concatenating: [imageTensor, tensor], alongAxis: 0)
     }
     return (imageTensor, Tensor<Int32>(labels))
 }
 
+func test(datasetType: String) throws -> [URL] {
+    let path = datasetPath+"/\(datasetType)"
+    let url = URL(string: path)!
+    //print(url)
+    let dirContents = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles])
+    //print(dirContents)
+    var urls: [URL] = []
+    for directoryURL in dirContents {
+        let subdirContents = try FileManager.default.contentsOfDirectory(
+            at: directoryURL, includingPropertiesForKeys: [.isDirectoryKey],
+            options: [.skipsHiddenFiles])
+        //print(subdirContents)
+        urls += subdirContents
+    }
+    return urls
+}
+
+func getTrainPaths() throws -> [String] {
+    let urls = try test(datasetType: "train")
+    return urls.map{$0.absoluteString.components(separatedBy: "//")[1]}
+}
+
+func getValPaths() throws -> [String] {
+    let urls = try test(datasetType: "val")
+    return urls.map{$0.absoluteString.components(separatedBy: "//")[1]}
+}
+
 func loadImagenetteTrainingFiles() -> (Tensor<Float>, Tensor<Int32>) {
-    return loadDataset(datasetType: "train")
+    let trainPaths = try! getTrainPaths()
+    return loadDataset(datasetPaths: trainPaths)
 }
 
 func loadImagenetteTestFiles() -> (Tensor<Float>, Tensor<Int32>) {
-    return loadDataset(datasetType: "val")
+    let valPaths = try! getValPaths()
+    return loadDataset(datasetPaths: valPaths)
 }
