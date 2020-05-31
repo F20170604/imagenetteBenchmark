@@ -16,13 +16,15 @@ let pil = Python.import("PIL")
 let pilImage = Python.import("PIL.Image")
 let pilImageOps = Python.import("PIL.ImageOps")
 
-func getTensor(fromPath: String) -> (Tensor<Float>, Int32) {
+func getPILTensor(fromPath: String, imageSize: Int32) -> (Tensor<Float>, Int32) {
     let img = pilImage.open(fromPath)
+    //print(fromPath)
     let image = np.array(img, dtype: np.float32) * (1.0 / 255)
     var imageTensor = Tensor<Float>(numpy: image)!
+    let outputSize = _TensorElementLiteral<Int32>(integerLiteral: imageSize)
     
     imageTensor = imageTensor.expandingShape(at: 0)
-    imageTensor = _Raw.resizeArea(images: imageTensor , size: [320, 320])
+    imageTensor = _Raw.resizeArea(images: imageTensor , size: [outputSize, outputSize])
     
     var label: Int32 = 0
 
@@ -32,22 +34,22 @@ func getTensor(fromPath: String) -> (Tensor<Float>, Int32) {
             break
         }
     }
-    
+    //print(imageTensor.shape)
     return (imageTensor, label)
 }
 
-func loadDataset(datasetPaths: [String]) -> (Tensor<Float>, Tensor<Int32>)  {
+func loadPILDataset(datasetPaths: [String], imageSize: Int32) -> (Tensor<Float>, Tensor<Int32>)  {
     
     var imageTensor: Tensor<Float>
     var labels: [Int32] = []
     
-    var data = getTensor(fromPath: datasetPaths[0])
+    var data = getPILTensor(fromPath: datasetPaths[0], imageSize: imageSize)
     imageTensor = data.0
     labels.append(data.1)
     
     for path in datasetPaths[1..<datasetPaths.count] {
         //print(imagePath)
-        data = getTensor(fromPath: path)
+        data = getPILTensor(fromPath: path, imageSize: imageSize)
         let tensor = data.0
         labels.append(data.1)
         imageTensor = Tensor(concatenating: [imageTensor, tensor], alongAxis: 0)
@@ -55,39 +57,12 @@ func loadDataset(datasetPaths: [String]) -> (Tensor<Float>, Tensor<Int32>)  {
     return (imageTensor, Tensor<Int32>(labels))
 }
 
-func test(datasetType: String) throws -> [URL] {
-    let path = datasetPath+"/\(datasetType)"
-    let url = URL(string: path)!
-    //print(url)
-    let dirContents = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles])
-    //print(dirContents)
-    var urls: [URL] = []
-    for directoryURL in dirContents {
-        let subdirContents = try FileManager.default.contentsOfDirectory(
-            at: directoryURL, includingPropertiesForKeys: [.isDirectoryKey],
-            options: [.skipsHiddenFiles])
-        //print(subdirContents)
-        urls += subdirContents
-    }
-    return urls
+func loadPILImagenetteTrainingFiles(imageSize: Int32) -> (Tensor<Float>, Tensor<Int32>) {
+    let trainPaths = try! getTrainPaths(imageSize: imageSize)
+    return loadPILDataset(datasetPaths: trainPaths, imageSize: imageSize)
 }
 
-func getTrainPaths() throws -> [String] {
-    let urls = try test(datasetType: "train")
-    return urls.map{$0.absoluteString.components(separatedBy: "//")[1]}
-}
-
-func getValPaths() throws -> [String] {
-    let urls = try test(datasetType: "val")
-    return urls.map{$0.absoluteString.components(separatedBy: "//")[1]}
-}
-
-func loadImagenetteTrainingFiles() -> (Tensor<Float>, Tensor<Int32>) {
-    let trainPaths = try! getTrainPaths()
-    return loadDataset(datasetPaths: trainPaths)
-}
-
-func loadImagenetteTestFiles() -> (Tensor<Float>, Tensor<Int32>) {
-    let valPaths = try! getValPaths()
-    return loadDataset(datasetPaths: valPaths)
+func loadPILImagenetteTestFiles(imageSize: Int32) -> (Tensor<Float>, Tensor<Int32>) {
+    let valPaths = try! getValPaths(imageSize: imageSize)
+    return loadPILDataset(datasetPaths: valPaths, imageSize: imageSize)
 }
