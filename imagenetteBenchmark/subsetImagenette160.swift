@@ -12,6 +12,7 @@ import PythonKit
 let rnd = Python.import("random")
 let os = Python.import("os")
 let ospath = Python.import("os.path")
+let glob = Python.import("glob")
 let destinationDirectory = "/Users/ayush517/subsetImagenette160"
 
 let originalDatasetPath = "/Users/ayush517/imagenette-160"

@@ -37,11 +37,12 @@ let datasetPath = "/Users/ayush517/subsetImagenette"
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
 //}
 
-benchmark("320 px STBImage Load operation", settings: .iterations(5)) {
-    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 320)
-}
+//benchmark("320 px STBImage Load operation", settings: .iterations(5)) {
+//    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 320)
+//}
 
 Benchmark.main()
+
 
 // --------- Path Processing Functions --------------
 
