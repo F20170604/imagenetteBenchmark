@@ -11,10 +11,7 @@ import Foundation
 import PythonKit
 
 let np = Python.import("numpy")
-let glob = Python.import("glob")
-let pil = Python.import("PIL")
 let pilImage = Python.import("PIL.Image")
-let pilImageOps = Python.import("PIL.ImageOps")
 
 func getPILTensor(fromPath: String, imageSize: Int32) -> (Tensor<Float>, Int32) {
     let img = pilImage.open(fromPath)
