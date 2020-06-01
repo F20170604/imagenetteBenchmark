@@ -16,8 +16,8 @@ let classNames = ["n01440764", "n02102040", "n02979186", "n03000684", "n03028079
 
 let datasetPath = "/Users/ayush517/subsetImagenette"
 
-//let newTrainPaths = create320Dataset(datasetType: "train", numImagesPerClass: 100)
-//let newValPaths = create320Dataset(datasetType: "val", numImagesPerClass: 100)
+let newTrainPaths = createDataset(datasetType: "train", imageSize: 320, numImagesPerClass: 100)
+//let newValPaths = createDataset(datasetType: "val", imageSize: 320, numImagesPerClass: 100)
 
 //let data = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
 //let data = loadPILImagenetteTrainingFiles(imageSize: 160)
@@ -42,7 +42,6 @@ let datasetPath = "/Users/ayush517/subsetImagenette"
 //}
 
 Benchmark.main()
-
 
 // --------- Path Processing Functions --------------
 

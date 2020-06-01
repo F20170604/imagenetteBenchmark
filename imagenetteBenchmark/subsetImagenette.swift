@@ -13,11 +13,14 @@ let rnd = Python.import("random")
 let os = Python.import("os")
 let ospath = Python.import("os.path")
 let glob = Python.import("glob")
-let destinationDirectory = "/Users/ayush517/subsetImagenette160"
 
-let originalDatasetPath = "/Users/ayush517/imagenette-160"
+var destinationDirectory = "/Users/ayush517/subsetImagenette"
+var originalDatasetPath = "/Users/ayush517/imagenette-"
 
-func create160Dataset(datasetType: String, numImagesPerClass: Int32) -> PythonObject {
+func createDataset(datasetType: String, imageSize: Int32, numImagesPerClass: Int32) -> PythonObject {
+    
+    originalDatasetPath = originalDatasetPath + String(imageSize)
+    destinationDirectory = destinationDirectory + String(imageSize)
     
     rnd.seed(42)
     var totalImagesDone : Int32 = 0

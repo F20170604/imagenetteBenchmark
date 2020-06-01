@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		387A5C2E2481DF2C007D9B0F /* subsetImagenette160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C2D2481DF2C007D9B0F /* subsetImagenette160.swift */; };
-		387A5C30248285CA007D9B0F /* subsetImagenette320.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C2F248285CA007D9B0F /* subsetImagenette320.swift */; };
+		387A5C2E2481DF2C007D9B0F /* subsetImagenette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */; };
 		387A5C322483A5C8007D9B0F /* stbImageBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C312483A5C8007D9B0F /* stbImageBenchmark.swift */; };
 		387A5C342483A5E0007D9B0F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C332483A5E0007D9B0F /* Image.swift */; };
 		389B0047247F678900D27828 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B0046247F678900D27828 /* main.swift */; };
@@ -38,8 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		387A5C2D2481DF2C007D9B0F /* subsetImagenette160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subsetImagenette160.swift; sourceTree = "<group>"; };
-		387A5C2F248285CA007D9B0F /* subsetImagenette320.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subsetImagenette320.swift; sourceTree = "<group>"; };
+		387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subsetImagenette.swift; sourceTree = "<group>"; };
 		387A5C312483A5C8007D9B0F /* stbImageBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stbImageBenchmark.swift; sourceTree = "<group>"; };
 		387A5C332483A5E0007D9B0F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		389B0043247F678900D27828 /* imagenetteBenchmark */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = imagenetteBenchmark; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +92,7 @@
 				387A5C312483A5C8007D9B0F /* stbImageBenchmark.swift */,
 				389B0065247F69CF00D27828 /* pilBenchmark.swift */,
 				387A5C332483A5E0007D9B0F /* Image.swift */,
-				387A5C2D2481DF2C007D9B0F /* subsetImagenette160.swift */,
-				387A5C2F248285CA007D9B0F /* subsetImagenette320.swift */,
+				387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */,
 			);
 			path = imagenetteBenchmark;
 			sourceTree = "<group>";
@@ -181,11 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				387A5C2E2481DF2C007D9B0F /* subsetImagenette160.swift in Sources */,
+				387A5C2E2481DF2C007D9B0F /* subsetImagenette.swift in Sources */,
 				387A5C342483A5E0007D9B0F /* Image.swift in Sources */,
 				389B0047247F678900D27828 /* main.swift in Sources */,
 				387A5C322483A5C8007D9B0F /* stbImageBenchmark.swift in Sources */,
-				387A5C30248285CA007D9B0F /* subsetImagenette320.swift in Sources */,
 				389B0066247F69CF00D27828 /* pilBenchmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
