@@ -16,7 +16,9 @@ let classNames = ["n01440764", "n02102040", "n02979186", "n03000684", "n03028079
 
 let datasetPath = "/Users/ayush517/subsetImagenette"
 
-let newTrainPaths = createDataset(datasetType: "train", imageSize: 320, numImagesPerClass: 100)
+//let newTrainPaths = createDataset(datasetType: "train", imageSize: 160, numImagesPerClass: 100)
+//let newValPaths = createDataset(datasetType: "val", imageSize: 160, numImagesPerClass: 100)
+//let newTrainPaths = createDataset(datasetType: "train", imageSize: 320, numImagesPerClass: 100)
 //let newValPaths = createDataset(datasetType: "val", imageSize: 320, numImagesPerClass: 100)
 
 //let data = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
@@ -24,6 +26,10 @@ let newTrainPaths = createDataset(datasetType: "train", imageSize: 320, numImage
 
 //print(data.0.shape)
 //print(data.1.shape)
+
+let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getURLS(datasetType: "train", imageSize: 160))
+
+//let _ = loadPILImagenetteTrainingFiles(imageSize: 160)
 
 //benchmark("160 px PIL Image Load operation", settings: .iterations(5)) {
 //    let _ = loadPILImagenetteTrainingFiles(imageSize: 160)
@@ -33,15 +39,17 @@ let newTrainPaths = createDataset(datasetType: "train", imageSize: 320, numImage
 //    let _ = loadPILImagenetteTrainingFiles(imageSize: 320)
 //}
 
-//benchmark("160 px STBImage Load operation", settings: .iterations(5)) {
-//    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
-//}
+benchmark("160 px STBImage Load operation", settings: .iterations(5)) {
+    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
+}
 
 //benchmark("320 px STBImage Load operation", settings: .iterations(5)) {
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 320)
 //}
 
 Benchmark.main()
+
+//test()
 
 // --------- Path Processing Functions --------------
 
@@ -57,6 +65,16 @@ func getURLS(datasetType: String, imageSize: Int32) throws -> [URL] {
         urls += subdirContents
     }
     return urls
+}
+
+func parentLabel(url: URL) -> String {
+    return url.deletingLastPathComponent().lastPathComponent
+}
+
+func createLabelDict(urls: [URL]) -> [String: Int] {
+    let allLabels = urls.map(parentLabel)
+    let labels = Array(Set(allLabels)).sorted()
+    return Dictionary(uniqueKeysWithValues: labels.enumerated().map{ ($0.element, $0.offset) })
 }
 
 func getTrainPaths(imageSize: Int32) throws -> [String] {

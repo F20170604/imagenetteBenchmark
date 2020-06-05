@@ -15,7 +15,7 @@ let ospath = Python.import("os.path")
 let glob = Python.import("glob")
 
 var destinationDirectory = "/Users/ayush517/subsetImagenette"
-var originalDatasetPath = "/Users/ayush517/imagenette-"
+var originalDatasetPath = "/Users/ayush517/imagenette2-"
 
 func createDataset(datasetType: String, imageSize: Int32, numImagesPerClass: Int32) -> PythonObject {
     
@@ -29,6 +29,7 @@ func createDataset(datasetType: String, imageSize: Int32, numImagesPerClass: Int
     for name in classNames[0..<10] {
         
         let path = originalDatasetPath+"/\(datasetType)/\(name)"
+        //print(path)
         let batchFiles = glob.glob(path+"/*.JPEG")
 
         rnd.shuffle(batchFiles)
@@ -68,4 +69,12 @@ func createDataset(datasetType: String, imageSize: Int32, numImagesPerClass: Int
     }
     //print(totalImagesDone)
     return finalList
+}
+
+func test() {
+    let files = glob.glob("/Users/ayush517/imagenette2-160/train/*/**.JPEG")
+    for i in [0..<files.count] {
+        let currFile = files[i]
+        print(currFile)
+    }
 }

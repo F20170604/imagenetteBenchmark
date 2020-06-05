@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382725FA24881AE500E0EAE0 /* attiwari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382725F924881AE500E0EAE0 /* attiwari.swift */; };
 		387A5C2E2481DF2C007D9B0F /* subsetImagenette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */; };
 		387A5C322483A5C8007D9B0F /* stbImageBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C312483A5C8007D9B0F /* stbImageBenchmark.swift */; };
 		387A5C342483A5E0007D9B0F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C332483A5E0007D9B0F /* Image.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		382725F924881AE500E0EAE0 /* attiwari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attiwari.swift; sourceTree = "<group>"; };
 		387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subsetImagenette.swift; sourceTree = "<group>"; };
 		387A5C312483A5C8007D9B0F /* stbImageBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stbImageBenchmark.swift; sourceTree = "<group>"; };
 		387A5C332483A5E0007D9B0F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				389B004D247F679300D27828 /* imagenetteBenchmark.entitlements */,
 				389B0046247F678900D27828 /* main.swift */,
+				382725F924881AE500E0EAE0 /* attiwari.swift */,
 				387A5C312483A5C8007D9B0F /* stbImageBenchmark.swift */,
 				389B0065247F69CF00D27828 /* pilBenchmark.swift */,
 				387A5C332483A5E0007D9B0F /* Image.swift */,
@@ -180,6 +183,7 @@
 			files = (
 				387A5C2E2481DF2C007D9B0F /* subsetImagenette.swift in Sources */,
 				387A5C342483A5E0007D9B0F /* Image.swift in Sources */,
+				382725FA24881AE500E0EAE0 /* attiwari.swift in Sources */,
 				389B0047247F678900D27828 /* main.swift in Sources */,
 				387A5C322483A5C8007D9B0F /* stbImageBenchmark.swift in Sources */,
 				389B0066247F69CF00D27828 /* pilBenchmark.swift in Sources */,

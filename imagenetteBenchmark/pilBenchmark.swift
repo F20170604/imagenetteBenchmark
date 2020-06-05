@@ -23,14 +23,11 @@ func getPILTensor(fromPath: String, imageSize: Int32) -> (Tensor<Float>, Int32) 
     imageTensor = imageTensor.expandingShape(at: 0)
     imageTensor = _Raw.resizeArea(images: imageTensor , size: [outputSize, outputSize])
     
-    var label: Int32 = 0
-
-    for i in 0..<10 {
-        if fromPath.contains(classNames[i]) {
-            label = Int32(i)
-            break
-        }
-    }
+    let folders = fromPath.components(separatedBy: "/")
+    let classFolder = folders[folders.count-2]
+    
+    let label: Int32 = Int32(unwrappedLabelDict[classFolder]!)
+    
     //print(imageTensor.shape)
     return (imageTensor, label)
 }

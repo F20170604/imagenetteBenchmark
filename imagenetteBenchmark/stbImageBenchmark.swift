@@ -15,18 +15,8 @@ func getSTBImageTensor(fromPath: URL, imageSize: Int) -> (Tensor<Float>, Int32) 
     let img = Image(jpeg: fromPath)
     var imageTensor = img.resized(to: (imageSize, imageSize)).tensor / 255.0
     
-    let classFolder = fromPath.absoluteString.components(separatedBy: "/")[7]
-    //print(classFolder)
-    var label: Int32 = -1
-
-    for i in 0..<10 {
-        if classFolder.contains(classNames[i]) {
-            label = Int32(i)
-            break
-        }
-    }
+    let label: Int32 = Int32(unwrappedLabelDict[parentLabel(url: fromPath)]!)
     
-    //let outputSize = _TensorElementLiteral<Int32>(integerLiteral: Int32(imageSize))
     imageTensor = imageTensor.reshaped(to: [1, imageSize, imageSize, 3])
     //print(imageTensor.shape)
     return (imageTensor, label)
