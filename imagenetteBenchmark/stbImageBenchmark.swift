@@ -50,3 +50,25 @@ func loadSTBImageImagenetteTestFiles(imageSize: Int32) -> (Tensor<Float>, Tensor
     let valPaths = try! getURLS(datasetType: "val", imageSize: imageSize)
     return loadSTBImageDataset(datasetPaths: valPaths, imageSize: imageSize)
 }
+
+// ------ After Remving steps 4 & 5 -------
+
+
+func loadSTBImageDataset2(datasetPaths: [URL], imageSize: Int32)  {
+    
+    for path in datasetPaths[0..<datasetPaths.count] {
+        getSTBImageTensor2(fromPath: path, imageSize: Int(imageSize))
+    }
+}
+
+func getSTBImageTensor2(fromPath: URL, imageSize: Int) {
+    //print(fromPath)
+    let img = Image(jpeg: fromPath)
+    let _ = img.resized(to: (imageSize, imageSize)).tensor / 255.0
+    //print(imageTensor.shape)
+}
+
+func loadSTBImageImagenetteTrainingFiles2(imageSize: Int32) {
+    let trainPaths = try! getURLS(datasetType: "train", imageSize: imageSize)
+    return loadSTBImageDataset2(datasetPaths: trainPaths, imageSize: imageSize)
+}

@@ -23,11 +23,21 @@ let datasetPath = "/Users/ayush517/subsetImagenette"
 
 let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS(datasetType: "train", imageSize: 160))
 
-let data = loadPILImagenetteTrainingFiles(imageSize: 160)
 //let data = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
 //print(data.0.shape)
 //print(data.1.shape)
 
+//------ Benchmarks after removing steps 4 & 5 ------
+
+//benchmark("160 px PIL Image Load operation", settings: .iterations(5)) {
+//    loadPILImagenetteTrainingFiles2(imageSize: 160)
+//}
+
+//benchmark("160 px STBImage Load operation", settings: .iterations(5)) {
+//    loadSTBImageImagenetteTrainingFiles2(imageSize: 160)
+//}
+
+//------ Previous benchmarks ------
 
 //benchmark("160 px PIL Image Load operation", settings: .iterations(5)) {
 //    let _ = loadPILImagenetteTrainingFiles(imageSize: 160)
@@ -45,7 +55,7 @@ let data = loadPILImagenetteTrainingFiles(imageSize: 160)
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 320)
 //}
 
-//Benchmark.main()
+Benchmark.main()
 
 //test()
 

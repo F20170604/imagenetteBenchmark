@@ -56,7 +56,31 @@ func loadPILImagenetteTrainingFiles(imageSize: Int32) -> (Tensor<Float>, Tensor<
     return loadPILDataset(datasetPaths: trainPaths, imageSize: imageSize)
 }
 
-func loadPILImagenetteTestFiles(imageSize: Int32) -> (Tensor<Float>, Tensor<Int32>) {
+// ------ Remving steps 4 & 5 -------
+
+func loadPILTestFiles2(imageSize: Int32) -> (Tensor<Float>, Tensor<Int32>) {
     let valPaths = try! getValPaths(imageSize: imageSize)
     return loadPILDataset(datasetPaths: valPaths, imageSize: imageSize)
+}
+
+func loadPILDataset2(datasetPaths: [String], imageSize: Int32)  {
+    for path in datasetPaths[0..<datasetPaths.count] {
+        getPILTensor2(fromPath: path, imageSize: imageSize)
+    }
+}
+
+func getPILTensor2(fromPath: String, imageSize: Int32) {
+    let img = pilImage.open(fromPath)
+    //print(fromPath)
+    let image = np.array(img, dtype: np.float32) * (1.0 / 255)
+    var imageTensor = Tensor<Float>(numpy: image)!
+    let outputSize = _TensorElementLiteral<Int32>(integerLiteral: imageSize)
+    
+    imageTensor = imageTensor.expandingShape(at: 0)
+    imageTensor = _Raw.resizeArea(images: imageTensor , size: [outputSize, outputSize])
+}
+
+func loadPILImagenetteTrainingFiles2(imageSize: Int32) {
+    let trainPaths = try! getTrainPaths(imageSize: imageSize)
+    loadPILDataset2(datasetPaths: trainPaths, imageSize: imageSize)
 }
