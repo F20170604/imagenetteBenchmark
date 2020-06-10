@@ -29,12 +29,20 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 
 //------ Benchmarks after removing steps 4 & 5 ------
 
-//benchmark("160 px PIL Image Load operation", settings: .iterations(5)) {
+//benchmark("160 px PIL Image Load operation", settings: .iterations(200)) {
 //    loadPILImagenetteTrainingFiles2(imageSize: 160)
+//}
+
+//benchmark("320 px PIL Image Load operation", settings: .iterations(25)) {
+//    loadPILImagenetteTrainingFiles2(imageSize: 320)
 //}
 
 //benchmark("160 px STBImage Load operation", settings: .iterations(5)) {
 //    loadSTBImageImagenetteTrainingFiles2(imageSize: 160)
+//}
+//
+//benchmark("320 px STBImage Load operation", settings: .iterations(5)) {
+//    loadSTBImageImagenetteTrainingFiles2(imageSize: 320)
 //}
 
 //------ Previous benchmarks ------
@@ -55,7 +63,7 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 320)
 //}
 
-Benchmark.main()
+//Benchmark.main()
 
 //test()
 
