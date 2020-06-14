@@ -34,5 +34,5 @@ New Benchmark Results
 |   320 x 320       | PIL Image Load operation | 3447590354.0 ns (3.4 s) | ±   7.97 %    |       25  |
 |   160 x 160       | STBImage Image Load operation | 929056745.0 ns (0.9 s) | ±   0.74 %    |       5  |
 |   320 x 320       | STBImage Image Load operation | 2794930989.0 ns (2.8 s) | ±   0.95 %    |       5  |
-|   160 x 160       | JPEGTurbo Image Load operation | 804755507.0 ns (0.8 s) | ±   9.13 %   |       5  |
-|   320 x 320       | JPEGTurbo Image Load operation | 2502020844.0 ns (2.5 s) | ±   5.98 %    |       5  |
+|   160 x 160       | JPEGTurbo Image Load operation | 748089979.5 (0.75 s) | ±   2.85 %   |       50  |
+|   320 x 320       | JPEGTurbo Image Load operation | 1985243526.50 ns (2.0 s) | ±   3.11 %    |       50  |
