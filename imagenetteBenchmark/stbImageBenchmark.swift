@@ -8,7 +8,6 @@
 
 import TensorFlow
 import Foundation
-import PythonKit
 
 func getSTBImageTensor(fromPath: URL, imageSize: Int) -> (Tensor<Float>, Int32) {
     //print(fromPath)
@@ -64,7 +63,7 @@ func loadSTBImageDataset2(datasetPaths: [URL], imageSize: Int32)  {
 func getSTBImageTensor2(fromPath: URL, imageSize: Int) {
     //print(fromPath)
     let img = Image(jpeg: fromPath)
-    let _ = img.resized(to: (imageSize, imageSize)).tensor / 255.0
+    let tensor = img.resized(to: (imageSize, imageSize)).tensor / 255.0
     //print(imageTensor.shape)
 }
 

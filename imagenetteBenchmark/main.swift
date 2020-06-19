@@ -8,6 +8,8 @@
 
 import Foundation
 import Benchmark
+import TensorFlow
+import ModelSupport
 
 print("Hello, World!")
 
@@ -29,43 +31,66 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 
 //------ Benchmarks after removing steps 4 & 5 ------
 
-//benchmark("160 px PIL Image Load operation", settings: .iterations(200)) {
+//benchmark("160 px PIL Image Load operation", settings: Iterations(200)) {
 //    loadPILImagenetteTrainingFiles2(imageSize: 160)
 //}
-
-//benchmark("320 px PIL Image Load operation", settings: .iterations(25)) {
+//
+//benchmark("320 px PIL Image Load operation", settings: Iterations(25)) {
 //    loadPILImagenetteTrainingFiles2(imageSize: 320)
 //}
 
-//benchmark("160 px STBImage Load operation", settings: .iterations(5)) {
+//benchmark("160 px STBImage Load operation", settings: Iterations(5)) {
 //    loadSTBImageImagenetteTrainingFiles2(imageSize: 160)
 //}
 //
-//benchmark("320 px STBImage Load operation", settings: .iterations(5)) {
+//benchmark("320 px STBImage Load operation", settings: Iterations(5)) {
 //    loadSTBImageImagenetteTrainingFiles2(imageSize: 320)
+//}
+
+//benchmark("160 px JPEGTurbo Load operation", settings: Iterations(5)) {
+//    loadJPEGTurboImagenetteTrainingFiles2(imageSize: 160)
+//}
+//
+//benchmark("320 px JPEGTurbo Load operation", settings: Iterations(5)) {
+//    loadJPEGTurboImagenetteTrainingFiles2(imageSize: 320)
+//}
+
+//benchmark("160 px JPEG Load operation", settings: Iterations(3)) {
+//    loadJPEGImagenetteTrainingFiles2(imageSize: 160)
+//}
+//
+//benchmark("320 px JPEG Load operation", settings: Iterations(3)) {
+//    loadJPEGImagenetteTrainingFiles2(imageSize: 320)
 //}
 
 //------ Previous benchmarks ------
 
-//benchmark("160 px PIL Image Load operation", settings: .iterations(5)) {
+//benchmark("160 px PIL Image Load operation", settings: Iterations(5)) {
 //    let _ = loadPILImagenetteTrainingFiles(imageSize: 160)
 //}
 
-//benchmark("320 px PIL Image Load operation", settings: .iterations(5)) {
+//benchmark("320 px PIL Image Load operation", settings: Iterations(5)) {
 //    let _ = loadPILImagenetteTrainingFiles(imageSize: 320)
 //}
 
-//benchmark("160 px STBImage Load operation", settings: .iterations(5)) {
+//benchmark("160 px STBImage Load operation", settings: Iterations(5)) {
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
 //}
 
-//benchmark("320 px STBImage Load operation", settings: .iterations(5)) {
+//benchmark("320 px STBImage Load operation", settings: Iterations(5)) {
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 320)
 //}
 
 //Benchmark.main()
 
+//loadJPEGImagenetteTrainingFiles2(imageSize: 160)
+//loadJPEGTurboImagenetteTrainingFiles2(imageSize: 320)
+
 //test()
+
+//turboImageSaveOperation()
+//test4()
+//testJPEG()
 
 // --------- Path Processing Functions --------------
 

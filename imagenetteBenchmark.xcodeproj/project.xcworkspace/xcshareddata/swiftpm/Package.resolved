@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "libjpeg-swift",
+        "repositoryURL": "https://github.com/Ayush517/libjpeg-swift",
+        "state": {
+          "branch": "master",
+          "revision": "e364a8356eb09e065e6a56335b1080e5b5c6a760",
+          "version": null
+        }
+      },
+      {
         "package": "swift-argument-parser",
         "repositoryURL": "https://github.com/apple/swift-argument-parser",
         "state": {
@@ -15,7 +24,7 @@
         "repositoryURL": "https://github.com/google/swift-benchmark",
         "state": {
           "branch": "master",
-          "revision": "f1e8d9a67d47fe51e9a2d7e5f2444a643db38277",
+          "revision": "ba1357ec14b7b6d0f2593c1f0ccb769fbe6092fd",
           "version": null
         }
       },
@@ -24,7 +33,7 @@
         "repositoryURL": "http://github.com/tensorflow/swift-models",
         "state": {
           "branch": "master",
-          "revision": "6e760d34ea581a9066b838c9754f72c8ff675eae",
+          "revision": "715e1a4827ec7fdf61642e1922006b6a8324f886",
           "version": null
         }
       },
