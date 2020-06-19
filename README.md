@@ -1,5 +1,10 @@
 # imagenetteBenchmark
 
+PIL: https://github.com/python-pillow/Pillow  
+STBImage: https://github.com/nothings/stb  
+JPEGTurbo: https://github.com/libjpeg-turbo/libjpeg-turbo  
+JPEG Library: https://github.com/kelvin13/jpeg  
+
 Creates a subset of 1000 training images by randomly choosing 100 images from each class of Imagenette with a seed value of 42.  
 
 *----*
@@ -34,5 +39,8 @@ New Benchmark Results
 |   320 x 320       | PIL Image Load operation | 3447590354.0 ns (3.4 s) | ±   7.97 %    |       25  |
 |   160 x 160       | STBImage Image Load operation | 929056745.0 ns (0.9 s) | ±   0.74 %    |       5  |
 |   320 x 320       | STBImage Image Load operation | 2794930989.0 ns (2.8 s) | ±   0.95 %    |       5  |
-|   160 x 160       | JPEGTurbo Image Load operation | 748089979.5 (0.75 s) | ±   2.85 %   |       50  |
+|   160 x 160       | JPEGTurbo Image Load operation | 748089979.5 ns (0.75 s) | ±   2.85 %   |       50  |
 |   320 x 320       | JPEGTurbo Image Load operation | 1985243526.50 ns (2.0 s) | ±   3.11 %    |       50  |
+|   160 x 160       | JPEG Image Load operation | 52044369008.0 ns (52 s) | ±   1.99 %   |       5 |
+|   320 x 320       | JPEG Image Load operation | 195361269887.0 ns (195 s) | ±   1.4 %    |       5  |
+
