@@ -50,7 +50,7 @@ func loadSTBImageImagenetteTestFiles(imageSize: Int32) -> (Tensor<Float>, Tensor
     return loadSTBImageDataset(datasetPaths: valPaths, imageSize: imageSize)
 }
 
-// ------ After Remving steps 4 & 5 -------
+// ------ After Removing steps 4 & 5 -------
 
 
 func loadSTBImageDataset2(datasetPaths: [URL], imageSize: Int32)  {

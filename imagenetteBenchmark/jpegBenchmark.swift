@@ -13,23 +13,23 @@ func getJPEGTensor(fromPath: URL, imageSize: Int) -> (Tensor<Float>, Int32) {
     //print(fromPath)
     let img = jpegImage(jpeg: fromPath)
     var imageTensor = img.resized(to: (imageSize, imageSize)).tensor / 255.0
-    
+
     let label: Int32 = Int32(unwrappedLabelDict[parentLabel(url: fromPath)]!)
-    
+
     imageTensor = imageTensor.reshaped(to: [1, imageSize, imageSize, 3])
     //print(imageTensor.shape)
     return (imageTensor, label)
 }
 
 func loadJPEGDataset(datasetPaths: [URL], imageSize: Int32) -> (Tensor<Float>, Tensor<Int32>)  {
-    
+
     var imageTensor: Tensor<Float>
     var labels: [Int32] = []
-    
+
     var data = getJPEGTensor(fromPath: datasetPaths[0], imageSize: Int(imageSize))
     imageTensor = data.0
     labels.append(data.1)
-    
+
     for path in datasetPaths[1..<datasetPaths.count] {
         //print(imagePath)
         data = getJPEGTensor(fromPath: path, imageSize: Int(imageSize))
@@ -50,11 +50,11 @@ func loadJPEGImagenetteTestFiles(imageSize: Int32) -> (Tensor<Float>, Tensor<Int
     return loadJPEGDataset(datasetPaths: valPaths, imageSize: imageSize)
 }
 
-// ------ After Remving steps 4 & 5 -------
+// ------ After Removing steps 4 & 5 -------
 
 
 func loadJPEGDataset2(datasetPaths: [URL], imageSize: Int32)  {
-    
+
     for path in datasetPaths[0..<datasetPaths.count] {
         getJPEGTensor2(fromPath: path, imageSize: Int(imageSize))
     }

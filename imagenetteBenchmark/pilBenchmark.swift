@@ -56,7 +56,7 @@ func loadPILImagenetteTrainingFiles(imageSize: Int32) -> (Tensor<Float>, Tensor<
     return loadPILDataset(datasetPaths: trainPaths, imageSize: imageSize)
 }
 
-// ------ Remving steps 4 & 5 -------
+// ------ Removing steps 4 & 5 -------
 
 func loadPILTestFiles2(imageSize: Int32) -> (Tensor<Float>, Tensor<Int32>) {
     let valPaths = try! getValPaths(imageSize: imageSize)

@@ -50,7 +50,7 @@ func loadJPEGTurboImagenetteTestFiles(imageSize: Int32) -> (Tensor<Float>, Tenso
     return loadJPEGTurboDataset(datasetPaths: valPaths, imageSize: imageSize)
 }
 
-// ------ After Remving steps 4 & 5 -------
+// ------ After Removing steps 4 & 5 -------
 
 
 func loadJPEGTurboDataset2(datasetPaths: [URL], imageSize: Int32)  {

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//import libjpeg
+import libjpeg
 import TensorFlow
 import PythonKit
 

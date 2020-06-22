@@ -68,7 +68,6 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 //benchmark("160 px PIL Image Load operation", settings: Iterations(5)) {
 //    let _ = loadPILImagenetteTrainingFiles(imageSize: 160)
 //}
-
 //benchmark("320 px PIL Image Load operation", settings: Iterations(5)) {
 //    let _ = loadPILImagenetteTrainingFiles(imageSize: 320)
 //}
@@ -76,12 +75,26 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 //benchmark("160 px STBImage Load operation", settings: Iterations(5)) {
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
 //}
-
 //benchmark("320 px STBImage Load operation", settings: Iterations(5)) {
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 320)
 //}
 
-//Benchmark.main()
+benchmark("160 px JPEGTurbo Load operation", settings: Iterations(2)) {
+    loadJPEGTurboImagenetteTrainingFiles(imageSize: 160)
+}
+
+benchmark("320 px JPEGTurbo Load operation", settings: Iterations(2)) {
+    loadJPEGTurboImagenetteTrainingFiles(imageSize: 320)
+}
+
+//benchmark("160 px JPEG Load operation", settings: Iterations(2)) {
+//    loadJPEGImagenetteTrainingFiles(imageSize: 160)
+//}
+//benchmark("320 px JPEG Load operation", settings: Iterations(2)) {
+//    loadJPEGImagenetteTrainingFiles(imageSize: 320)
+//}
+
+Benchmark.main()
 
 //loadJPEGImagenetteTrainingFiles2(imageSize: 160)
 //loadJPEGTurboImagenetteTrainingFiles2(imageSize: 320)
@@ -91,6 +104,9 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 //turboImageSaveOperation()
 //test4()
 //testJPEG()
+
+//try! decode(jpeg: path)
+
 
 // --------- Path Processing Functions --------------
 
