@@ -25,6 +25,8 @@ Benchmark Results
 |   320 x 320       | STBImage Image Load operation | 126589557798.0 ns (126 s) | ±   13.58 %    |       5  |
 |   160 x 160       | JPEGTurbo Load operation |   55647521090.5 ns (55 s) |  ±   2.51 %     |          5
 |   320 x 320       | JPEGTurbo Load operation |  139024297588.0 ns (139 s) |  ±   2.66 %      |         5
+|   160 x 160       | JPEG Load operation  |  117379591932.5 ns (117 s) |  ±   6.97 %     |         5
+|   320 x 320       | JPEG Load operation  |  349771842833.5 ns (349 s) |  ±   0.63 %    |         5
 
 *----*
 
