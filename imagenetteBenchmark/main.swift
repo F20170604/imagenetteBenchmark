@@ -25,20 +25,16 @@ let datasetPath = "/Users/ayush517/subsetImagenette"
 
 let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS(datasetType: "train", imageSize: 160))
 
-//let data = loadSTBImageImagenetteTrainingFiles(imageSize: 160)
-//print(data.0.shape)
-//print(data.1.shape)
-
 //------ Benchmarks after removing steps 4 & 5 ------
 
 //benchmark("160 px PIL Image Load operation", settings: Iterations(200)) {
 //    loadPILImagenetteTrainingFiles2(imageSize: 160)
 //}
 //
-//benchmark("320 px PIL Image Load operation", settings: Iterations(25)) {
+//benchmark("320 px PIL Image Load operation", settings: Iterations(5)) {
 //    loadPILImagenetteTrainingFiles2(imageSize: 320)
 //}
-
+//
 //benchmark("160 px STBImage Load operation", settings: Iterations(5)) {
 //    loadSTBImageImagenetteTrainingFiles2(imageSize: 160)
 //}
@@ -46,7 +42,7 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 //benchmark("320 px STBImage Load operation", settings: Iterations(5)) {
 //    loadSTBImageImagenetteTrainingFiles2(imageSize: 320)
 //}
-
+//
 //benchmark("160 px JPEGTurbo Load operation", settings: Iterations(5)) {
 //    loadJPEGTurboImagenetteTrainingFiles2(imageSize: 160)
 //}
@@ -79,13 +75,12 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 //    let _ = loadSTBImageImagenetteTrainingFiles(imageSize: 320)
 //}
 
-benchmark("160 px JPEGTurbo Load operation", settings: Iterations(2)) {
-    loadJPEGTurboImagenetteTrainingFiles(imageSize: 160)
-}
-
-benchmark("320 px JPEGTurbo Load operation", settings: Iterations(2)) {
-    loadJPEGTurboImagenetteTrainingFiles(imageSize: 320)
-}
+//benchmark("160 px JPEGTurbo Load operation", settings: Iterations(2)) {
+//    loadJPEGTurboImagenetteTrainingFiles(imageSize: 160)
+//}
+//benchmark("320 px JPEGTurbo Load operation", settings: Iterations(2)) {
+//    loadJPEGTurboImagenetteTrainingFiles(imageSize: 320)
+//}
 
 //benchmark("160 px JPEG Load operation", settings: Iterations(2)) {
 //    loadJPEGImagenetteTrainingFiles(imageSize: 160)
@@ -95,17 +90,6 @@ benchmark("320 px JPEGTurbo Load operation", settings: Iterations(2)) {
 //}
 
 Benchmark.main()
-
-//loadJPEGImagenetteTrainingFiles2(imageSize: 160)
-//loadJPEGTurboImagenetteTrainingFiles2(imageSize: 320)
-
-//test()
-
-//turboImageSaveOperation()
-//test4()
-//testJPEG()
-
-//try! decode(jpeg: path)
 
 
 // --------- Path Processing Functions --------------
