@@ -76,7 +76,7 @@ public struct jtImage {
 //
 //
 //
-            var imgDe = tjJPEGLoadImageCompressed(url.path, &width, 0, &height, &pixelFormat, &inSubsamp, 0)
+            var imgDe = tjJPEGLoadCompressedImage(url.path, &width, 0, &height, &pixelFormat, &inSubsamp, 0)
 //            print(width)
 //            print(height)
 //            print(pixelFormat)

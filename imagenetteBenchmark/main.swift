@@ -89,7 +89,9 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 //    loadJPEGImagenetteTrainingFiles(imageSize: 320)
 //}
 
-Benchmark.main()
+//Benchmark.main()
+
+test4()
 
 
 // --------- Path Processing Functions --------------

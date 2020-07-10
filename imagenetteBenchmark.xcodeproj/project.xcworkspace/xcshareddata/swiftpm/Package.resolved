@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/Ayush517/libjpeg-swift",
         "state": {
           "branch": "master",
-          "revision": "e364a8356eb09e065e6a56335b1080e5b5c6a760",
+          "revision": "3ff2fe7c7e95fe8e898e79b80c6aa28be6f85abd",
           "version": null
         }
       },
@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/google/swift-benchmark",
         "state": {
           "branch": "master",
-          "revision": "ba1357ec14b7b6d0f2593c1f0ccb769fbe6092fd",
+          "revision": "e2bb5e3e74702b2a764f62007a79bc9feb667ee3",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "http://github.com/tensorflow/swift-models",
         "state": {
           "branch": "master",
-          "revision": "715e1a4827ec7fdf61642e1922006b6a8324f886",
+          "revision": "7680f531d831b6c12d6405311ca8967c37e48d77",
           "version": null
         }
       },
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {
           "branch": null,
-          "revision": "7f36441e3372665b1b414f8ac93b5905cc42a405",
-          "version": "1.9.0"
+          "revision": "4d5fc241fbb6edf00ffe54a6ffe02eff8064a17c",
+          "version": "1.10.1"
         }
       }
     ]

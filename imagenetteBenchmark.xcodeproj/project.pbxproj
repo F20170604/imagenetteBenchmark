@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		381780F52496012300A60DB9 /* jpegturboBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381780F42496012300A60DB9 /* jpegturboBenchmark.swift */; };
 		382725FA24881AE500E0EAE0 /* attiwari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382725F924881AE500E0EAE0 /* attiwari.swift */; };
+		3850958924B88EAE00FF7D6E /* libjpeg-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 3850958824B88EAE00FF7D6E /* libjpeg-swift */; };
 		387A52952493962900BF0A7B /* jpegturboTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A52942493962900BF0A7B /* jpegturboTesting.swift */; };
 		387A52972493974100BF0A7B /* jtImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A52962493974100BF0A7B /* jtImage.swift */; };
 		387A5C2E2481DF2C007D9B0F /* subsetImagenette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */; };
@@ -29,22 +30,27 @@
 		38E8557E24997DA200522C2A /* jpegBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E8557D24997DA200522C2A /* jpegBenchmark.swift */; };
 		38E855802499816300522C2A /* jpegImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E8557F2499816300522C2A /* jpegImage.swift */; };
 		38F98061249BEFA400703912 /* jpeg in Frameworks */ = {isa = PBXBuildFile; productRef = 38F98060249BEFA400703912 /* jpeg */; };
-		38F9806A249D388F00703912 /* libjpeg-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 38F98069249D388F00703912 /* libjpeg-swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		389B0041247F678900D27828 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = Users/ayush517/imagenetteBenchmark/dynamic;
+			dstSubfolderSpec = 1;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3815CB4224B8386700C97568 /* libturbojpeg.0.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.0.2.0.dylib; path = "../libjpeg-swift/jpeg-turbo/2.0.5/lib/libturbojpeg.0.2.0.dylib"; sourceTree = "<group>"; };
+		3815CB4324B8386700C97568 /* libjpeg.8.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.8.2.2.dylib; path = "../libjpeg-swift/jpeg-turbo/2.0.5/lib/libjpeg.8.2.2.dylib"; sourceTree = "<group>"; };
+		3815CB4424B8386700C97568 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = "../libjpeg-swift/jpeg-turbo/2.0.5/lib/libjpeg.a"; sourceTree = "<group>"; };
+		3815CB4524B8386700C97568 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "../libjpeg-swift/jpeg-turbo/2.0.5/lib/libturbojpeg.a"; sourceTree = "<group>"; };
+		3815CB4A24B8393C00C97568 /* libjpeg.8.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.8.2.2.dylib; path = dynamic/libjpeg.8.2.2.dylib; sourceTree = "<group>"; };
+		3815CB4B24B8393C00C97568 /* libturbojpeg.0.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.0.2.0.dylib; path = dynamic/libturbojpeg.0.2.0.dylib; sourceTree = "<group>"; };
 		381780F42496012300A60DB9 /* jpegturboBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jpegturboBenchmark.swift; sourceTree = "<group>"; };
 		382725F924881AE500E0EAE0 /* attiwari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attiwari.swift; sourceTree = "<group>"; };
 		387A52942493962900BF0A7B /* jpegturboTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jpegturboTesting.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 		389B0046247F678900D27828 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		389B004D247F679300D27828 /* imagenetteBenchmark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imagenetteBenchmark.entitlements; sourceTree = "<group>"; };
 		389B0065247F69CF00D27828 /* pilBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pilBenchmark.swift; sourceTree = "<group>"; };
+		38C6A3E024B824A100C45B24 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = "../libjpeg-swift/jpeg-turbo/libjpeg.a"; sourceTree = "<group>"; };
+		38C6A3E124B824A100C45B24 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "../libjpeg-swift/jpeg-turbo/libturbojpeg.a"; sourceTree = "<group>"; };
 		38E8557D24997DA200522C2A /* jpegBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jpegBenchmark.swift; sourceTree = "<group>"; };
 		38E8557F2499816300522C2A /* jpegImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jpegImage.swift; sourceTree = "<group>"; };
 		38F98062249BEFE500703912 /* jpeg */ = {isa = PBXFileReference; lastKnownFileType = folder; name = jpeg; path = ../jpeg; sourceTree = "<group>"; };
@@ -70,7 +78,7 @@
 				389B0063247F693600D27828 /* TextModels in Frameworks */,
 				389B0055247F693600D27828 /* ImageClassificationModels in Frameworks */,
 				389B0061247F693600D27828 /* Datasets in Frameworks */,
-				38F9806A249D388F00703912 /* libjpeg-swift in Frameworks */,
+				3850958924B88EAE00FF7D6E /* libjpeg-swift in Frameworks */,
 				389B0057247F693600D27828 /* MiniGo in Frameworks */,
 				389B0053247F693600D27828 /* VideoClassificationModels in Frameworks */,
 				389B005D247F693600D27828 /* FastStyleTransfer in Frameworks */,
@@ -124,6 +132,14 @@
 		389B0064247F694300D27828 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3815CB4324B8386700C97568 /* libjpeg.8.2.2.dylib */,
+				3815CB4A24B8393C00C97568 /* libjpeg.8.2.2.dylib */,
+				3815CB4B24B8393C00C97568 /* libturbojpeg.0.2.0.dylib */,
+				3815CB4424B8386700C97568 /* libjpeg.a */,
+				3815CB4224B8386700C97568 /* libturbojpeg.0.2.0.dylib */,
+				3815CB4524B8386700C97568 /* libturbojpeg.a */,
+				38C6A3E024B824A100C45B24 /* libjpeg.a */,
+				38C6A3E124B824A100C45B24 /* libturbojpeg.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,7 +172,7 @@
 				389B0060247F693600D27828 /* Datasets */,
 				389B0062247F693600D27828 /* TextModels */,
 				38F98060249BEFA400703912 /* jpeg */,
-				38F98069249D388F00703912 /* libjpeg-swift */,
+				3850958824B88EAE00FF7D6E /* libjpeg-swift */,
 			);
 			productName = imagenetteBenchmark;
 			productReference = 389B0043247F678900D27828 /* imagenetteBenchmark */;
@@ -190,7 +206,7 @@
 				389B004E247F67D200D27828 /* XCRemoteSwiftPackageReference "swift-benchmark" */,
 				389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */,
 				38F9805F249BEFA400703912 /* XCRemoteSwiftPackageReference "jpeg" */,
-				38F98068249D388F00703912 /* XCRemoteSwiftPackageReference "libjpeg-swift" */,
+				3850958724B88EAE00FF7D6E /* XCRemoteSwiftPackageReference "libjpeg-swift" */,
 			);
 			productRefGroup = 389B0044247F678900D27828 /* Products */;
 			projectDirPath = "";
@@ -345,6 +361,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B298T8UF7G;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dynamic",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -359,6 +380,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B298T8UF7G;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dynamic",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -389,6 +415,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3850958724B88EAE00FF7D6E /* XCRemoteSwiftPackageReference "libjpeg-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ayush517/libjpeg-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		389B004E247F67D200D27828 /* XCRemoteSwiftPackageReference "swift-benchmark" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/swift-benchmark";
@@ -413,17 +447,14 @@
 				kind = branch;
 			};
 		};
-		38F98068249D388F00703912 /* XCRemoteSwiftPackageReference "libjpeg-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Ayush517/libjpeg-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3850958824B88EAE00FF7D6E /* libjpeg-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3850958724B88EAE00FF7D6E /* XCRemoteSwiftPackageReference "libjpeg-swift" */;
+			productName = "libjpeg-swift";
+		};
 		389B004F247F67D200D27828 /* Benchmark */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 389B004E247F67D200D27828 /* XCRemoteSwiftPackageReference "swift-benchmark" */;
@@ -478,11 +509,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 38F9805F249BEFA400703912 /* XCRemoteSwiftPackageReference "jpeg" */;
 			productName = jpeg;
-		};
-		38F98069249D388F00703912 /* libjpeg-swift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38F98068249D388F00703912 /* XCRemoteSwiftPackageReference "libjpeg-swift" */;
-			productName = "libjpeg-swift";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
