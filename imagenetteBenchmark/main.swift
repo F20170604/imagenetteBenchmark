@@ -91,7 +91,7 @@ let unwrappedLabelDict : [String: Int] = createLabelDict(urls: try getFolderURLS
 
 //Benchmark.main()
 
-test4()
+test3()
 
 
 // --------- Path Processing Functions --------------

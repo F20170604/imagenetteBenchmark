@@ -15,40 +15,47 @@ let path = "/Users/ayush517/Downloads/tiger.jpg"
 let url = (path as NSString).utf8String
 let filenamepointer = UnsafeMutablePointer<Int8>(mutating: url)!
 
-//func test3() {
-//    var width: Int32 = 0
-//    var height: Int32 = 0
-//    var pixelFormat: Int32 = 0
-//    var inSubsamp: Int32 = 0
-//
-//    let expImage = tjJPEGLoadImage(filenamepointer, &width, 0, &height, &pixelFormat, &inSubsamp, 0)
-//    print(expImage)
-//    
-//    let path3 = "/Users/ayush517/Downloads/savedBoooya.ppm"
-//    let url3 = (path3 as NSString).utf8String
-//    let filenamepointer3 = UnsafeMutablePointer<Int8>(mutating: url3)!
-//
-//    let status = tjSaveImage(filenamepointer3, expImage, width, 0, height, pixelFormat, 0)
-//    print(status)
-//
-//    let path4 = "/Users/ayush517/Downloads/savedBoooya.jpeg"
-//    let url4 = (path4 as NSString).utf8String
-//    let filenamepointer4 = UnsafeMutablePointer<Int8>(mutating: url4)!
-//
-//    let status2 = tjJPEGSaveImage(filenamepointer4, expImage, width, 0, height, pixelFormat, inSubsamp, 0)
-//    print(status2)
-//}
+func test3() {
+    var width: Int32 = 0
+    var height: Int32 = 0
+    var pixelFormat: Int32 = 0
+    var inSubsamp: Int32 = 0
 
-func test4() {
-//    let jpegFile = fopen(filenamepointer, "rb")
-//    fseek(jpegFile, 0, SEEK_END)
-//    let size = ftell(jpegFile)
-//    print(size)
+    let imgDe = tjJPEGLoadCompressedImage(filenamepointer, &width, 0, &height, &pixelFormat, &inSubsamp, 0)
+//    print(imgDe)
+//    let data = [UInt8](UnsafeBufferPointer(start: imgDe, count: Int(width * height * 3)))
+//    tjFree(imgDe)
+//    let loadedTensor = Tensor<UInt8>(shape: [Int(height), Int(width), 3], scalars: data)
+//    var imgTensor = Tensor<Float>(loadedTensor)
+//    imgTensor /= 255.0
+    //showTensorImage(imgTensor)
     
-    let img = jtImage(jpeg: URL(string: path)!)
-    let imgTensor = img.resized(to: (160, 160)).tensor / 255.0
-    showTensorImage(imgTensor)
+    
+    let path3 = "/Users/ayush517/Downloads/savedBoooya.ppm"
+    let url3 = (path3 as NSString).utf8String
+    let filenamepointer3 = UnsafeMutablePointer<Int8>(mutating: url3)!
+
+    let status = tjSaveImage(filenamepointer3, imgDe, width, 0, height, 0, 0)
+    print(status)
+
+    let path4 = "/Users/ayush517/Downloads/savedBoooya.jpeg"
+    let url4 = (path4 as NSString).utf8String
+    let filenamepointer4 = UnsafeMutablePointer<Int8>(mutating: url4)!
+
+    let status2 = tjJPEGSaveImage(filenamepointer4, imgDe, width, 0, height, 0, inSubsamp, 0)
+    print(status2)
 }
+
+//func test4() {
+////    let jpegFile = fopen(filenamepointer, "rb")
+////    fseek(jpegFile, 0, SEEK_END)
+////    let size = ftell(jpegFile)
+////    print(size)
+//
+//    let img = jtImage(jpeg: URL(string: path)!)
+//    let imgTensor = img.resized(to: (160, 160)).tensor / 255.0
+//    showTensorImage(imgTensor)
+//}
 
 let plt = Python.import("matplotlib.pyplot")
 

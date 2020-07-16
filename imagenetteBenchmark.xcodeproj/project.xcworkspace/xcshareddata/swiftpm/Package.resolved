@@ -2,11 +2,20 @@
   "object": {
     "pins": [
       {
+        "package": "JPEG",
+        "repositoryURL": "https://github.com/kelvin13/jpeg",
+        "state": {
+          "branch": "master",
+          "revision": "d28707ff7c7ccb58b7012006517564dc271d586d",
+          "version": null
+        }
+      },
+      {
         "package": "libjpeg-swift",
         "repositoryURL": "https://github.com/Ayush517/libjpeg-swift",
         "state": {
           "branch": "master",
-          "revision": "3ff2fe7c7e95fe8e898e79b80c6aa28be6f85abd",
+          "revision": "696315d186141b1bae8b7af77a47f106ef420102",
           "version": null
         }
       },
@@ -30,10 +39,10 @@
       },
       {
         "package": "TensorFlowModels",
-        "repositoryURL": "http://github.com/tensorflow/swift-models",
+        "repositoryURL": "https://github.com/tensorflow/swift-models",
         "state": {
           "branch": "master",
-          "revision": "7680f531d831b6c12d6405311ca8967c37e48d77",
+          "revision": "e1e6121d5a06a3a381344df74b3cfd9ed15d6f6e",
           "version": null
         }
       },
@@ -42,8 +51,8 @@
         "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {
           "branch": null,
-          "revision": "4d5fc241fbb6edf00ffe54a6ffe02eff8064a17c",
-          "version": "1.10.1"
+          "revision": "f33185acd089405d365982ccab2f58469052a545",
+          "version": "1.10.2"
         }
       }
     ]

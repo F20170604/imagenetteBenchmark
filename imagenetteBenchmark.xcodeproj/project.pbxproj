@@ -8,8 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		381780F52496012300A60DB9 /* jpegturboBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381780F42496012300A60DB9 /* jpegturboBenchmark.swift */; };
+		38216F9124BCBDD000439027 /* libjpeg-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 38216F9024BCBDD000439027 /* libjpeg-swift */; };
+		38216F9424BCBE1D00439027 /* jpeg in Frameworks */ = {isa = PBXBuildFile; productRef = 38216F9324BCBE1D00439027 /* jpeg */; };
 		382725FA24881AE500E0EAE0 /* attiwari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382725F924881AE500E0EAE0 /* attiwari.swift */; };
-		3850958924B88EAE00FF7D6E /* libjpeg-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 3850958824B88EAE00FF7D6E /* libjpeg-swift */; };
+		38541D4824BAC583001DAF15 /* ImageClassificationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D4724BAC583001DAF15 /* ImageClassificationModels */; };
+		38541D4A24BAC583001DAF15 /* TextModels in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D4924BAC583001DAF15 /* TextModels */; };
+		38541D4C24BAC583001DAF15 /* MiniGo in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D4B24BAC583001DAF15 /* MiniGo */; };
+		38541D4E24BAC583001DAF15 /* ModelSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D4D24BAC583001DAF15 /* ModelSupport */; };
+		38541D5024BAC583001DAF15 /* Batcher in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D4F24BAC583001DAF15 /* Batcher */; };
+		38541D5224BAC583001DAF15 /* TrainingLoop in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D5124BAC583001DAF15 /* TrainingLoop */; };
+		38541D5424BAC583001DAF15 /* FastStyleTransfer in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D5324BAC583001DAF15 /* FastStyleTransfer */; };
+		38541D5624BAC583001DAF15 /* Checkpoints in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D5524BAC583001DAF15 /* Checkpoints */; };
+		38541D5824BAC583001DAF15 /* RecommendationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D5724BAC583001DAF15 /* RecommendationModels */; };
+		38541D5A24BAC583001DAF15 /* Datasets in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D5924BAC583001DAF15 /* Datasets */; };
+		38541D5C24BAC583001DAF15 /* VideoClassificationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 38541D5B24BAC583001DAF15 /* VideoClassificationModels */; };
 		387A52952493962900BF0A7B /* jpegturboTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A52942493962900BF0A7B /* jpegturboTesting.swift */; };
 		387A52972493974100BF0A7B /* jtImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A52962493974100BF0A7B /* jtImage.swift */; };
 		387A5C2E2481DF2C007D9B0F /* subsetImagenette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C2D2481DF2C007D9B0F /* subsetImagenette.swift */; };
@@ -17,32 +29,10 @@
 		387A5C342483A5E0007D9B0F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A5C332483A5E0007D9B0F /* Image.swift */; };
 		389B0047247F678900D27828 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B0046247F678900D27828 /* main.swift */; };
 		389B0050247F67D200D27828 /* Benchmark in Frameworks */ = {isa = PBXBuildFile; productRef = 389B004F247F67D200D27828 /* Benchmark */; };
-		389B0053247F693600D27828 /* VideoClassificationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0052247F693600D27828 /* VideoClassificationModels */; };
-		389B0055247F693600D27828 /* ImageClassificationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0054247F693600D27828 /* ImageClassificationModels */; };
-		389B0057247F693600D27828 /* MiniGo in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0056247F693600D27828 /* MiniGo */; };
-		389B0059247F693600D27828 /* ModelSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0058247F693600D27828 /* ModelSupport */; };
-		389B005B247F693600D27828 /* Batcher in Frameworks */ = {isa = PBXBuildFile; productRef = 389B005A247F693600D27828 /* Batcher */; };
-		389B005D247F693600D27828 /* FastStyleTransfer in Frameworks */ = {isa = PBXBuildFile; productRef = 389B005C247F693600D27828 /* FastStyleTransfer */; };
-		389B005F247F693600D27828 /* RecommendationModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B005E247F693600D27828 /* RecommendationModels */; };
-		389B0061247F693600D27828 /* Datasets in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0060247F693600D27828 /* Datasets */; };
-		389B0063247F693600D27828 /* TextModels in Frameworks */ = {isa = PBXBuildFile; productRef = 389B0062247F693600D27828 /* TextModels */; };
 		389B0066247F69CF00D27828 /* pilBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389B0065247F69CF00D27828 /* pilBenchmark.swift */; };
 		38E8557E24997DA200522C2A /* jpegBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E8557D24997DA200522C2A /* jpegBenchmark.swift */; };
 		38E855802499816300522C2A /* jpegImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E8557F2499816300522C2A /* jpegImage.swift */; };
-		38F98061249BEFA400703912 /* jpeg in Frameworks */ = {isa = PBXBuildFile; productRef = 38F98060249BEFA400703912 /* jpeg */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		389B0041247F678900D27828 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = Users/ayush517/imagenetteBenchmark/dynamic;
-			dstSubfolderSpec = 1;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3815CB4224B8386700C97568 /* libturbojpeg.0.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.0.2.0.dylib; path = "../libjpeg-swift/jpeg-turbo/2.0.5/lib/libturbojpeg.0.2.0.dylib"; sourceTree = "<group>"; };
@@ -64,9 +54,9 @@
 		389B0065247F69CF00D27828 /* pilBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pilBenchmark.swift; sourceTree = "<group>"; };
 		38C6A3E024B824A100C45B24 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = "../libjpeg-swift/jpeg-turbo/libjpeg.a"; sourceTree = "<group>"; };
 		38C6A3E124B824A100C45B24 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "../libjpeg-swift/jpeg-turbo/libturbojpeg.a"; sourceTree = "<group>"; };
+		38CE0ADE24C0D28200A7304C /* libjpeg-swift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "libjpeg-swift"; path = "../libjpeg-swift"; sourceTree = "<group>"; };
 		38E8557D24997DA200522C2A /* jpegBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jpegBenchmark.swift; sourceTree = "<group>"; };
 		38E8557F2499816300522C2A /* jpegImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jpegImage.swift; sourceTree = "<group>"; };
-		38F98062249BEFE500703912 /* jpeg */ = {isa = PBXFileReference; lastKnownFileType = folder; name = jpeg; path = ../jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,18 +64,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				389B005B247F693600D27828 /* Batcher in Frameworks */,
-				389B0063247F693600D27828 /* TextModels in Frameworks */,
-				389B0055247F693600D27828 /* ImageClassificationModels in Frameworks */,
-				389B0061247F693600D27828 /* Datasets in Frameworks */,
-				3850958924B88EAE00FF7D6E /* libjpeg-swift in Frameworks */,
-				389B0057247F693600D27828 /* MiniGo in Frameworks */,
-				389B0053247F693600D27828 /* VideoClassificationModels in Frameworks */,
-				389B005D247F693600D27828 /* FastStyleTransfer in Frameworks */,
-				389B005F247F693600D27828 /* RecommendationModels in Frameworks */,
-				389B0059247F693600D27828 /* ModelSupport in Frameworks */,
+				38541D5024BAC583001DAF15 /* Batcher in Frameworks */,
+				38541D4824BAC583001DAF15 /* ImageClassificationModels in Frameworks */,
+				38541D5224BAC583001DAF15 /* TrainingLoop in Frameworks */,
+				38541D4A24BAC583001DAF15 /* TextModels in Frameworks */,
+				38541D4C24BAC583001DAF15 /* MiniGo in Frameworks */,
+				38541D5624BAC583001DAF15 /* Checkpoints in Frameworks */,
 				389B0050247F67D200D27828 /* Benchmark in Frameworks */,
-				38F98061249BEFA400703912 /* jpeg in Frameworks */,
+				38541D5824BAC583001DAF15 /* RecommendationModels in Frameworks */,
+				38216F9124BCBDD000439027 /* libjpeg-swift in Frameworks */,
+				38541D5C24BAC583001DAF15 /* VideoClassificationModels in Frameworks */,
+				38541D4E24BAC583001DAF15 /* ModelSupport in Frameworks */,
+				38541D5424BAC583001DAF15 /* FastStyleTransfer in Frameworks */,
+				38216F9424BCBE1D00439027 /* jpeg in Frameworks */,
+				38541D5A24BAC583001DAF15 /* Datasets in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +87,7 @@
 		389B003A247F678800D27828 = {
 			isa = PBXGroup;
 			children = (
-				38F98062249BEFE500703912 /* jpeg */,
+				38CE0ADE24C0D28200A7304C /* libjpeg-swift */,
 				389B0045247F678900D27828 /* imagenetteBenchmark */,
 				389B0044247F678900D27828 /* Products */,
 				389B0064247F694300D27828 /* Frameworks */,
@@ -153,7 +145,6 @@
 			buildPhases = (
 				389B003F247F678900D27828 /* Sources */,
 				389B0040247F678900D27828 /* Frameworks */,
-				389B0041247F678900D27828 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -162,17 +153,19 @@
 			name = imagenetteBenchmark;
 			packageProductDependencies = (
 				389B004F247F67D200D27828 /* Benchmark */,
-				389B0052247F693600D27828 /* VideoClassificationModels */,
-				389B0054247F693600D27828 /* ImageClassificationModels */,
-				389B0056247F693600D27828 /* MiniGo */,
-				389B0058247F693600D27828 /* ModelSupport */,
-				389B005A247F693600D27828 /* Batcher */,
-				389B005C247F693600D27828 /* FastStyleTransfer */,
-				389B005E247F693600D27828 /* RecommendationModels */,
-				389B0060247F693600D27828 /* Datasets */,
-				389B0062247F693600D27828 /* TextModels */,
-				38F98060249BEFA400703912 /* jpeg */,
-				3850958824B88EAE00FF7D6E /* libjpeg-swift */,
+				38541D4724BAC583001DAF15 /* ImageClassificationModels */,
+				38541D4924BAC583001DAF15 /* TextModels */,
+				38541D4B24BAC583001DAF15 /* MiniGo */,
+				38541D4D24BAC583001DAF15 /* ModelSupport */,
+				38541D4F24BAC583001DAF15 /* Batcher */,
+				38541D5124BAC583001DAF15 /* TrainingLoop */,
+				38541D5324BAC583001DAF15 /* FastStyleTransfer */,
+				38541D5524BAC583001DAF15 /* Checkpoints */,
+				38541D5724BAC583001DAF15 /* RecommendationModels */,
+				38541D5924BAC583001DAF15 /* Datasets */,
+				38541D5B24BAC583001DAF15 /* VideoClassificationModels */,
+				38216F9024BCBDD000439027 /* libjpeg-swift */,
+				38216F9324BCBE1D00439027 /* jpeg */,
 			);
 			productName = imagenetteBenchmark;
 			productReference = 389B0043247F678900D27828 /* imagenetteBenchmark */;
@@ -204,9 +197,9 @@
 			mainGroup = 389B003A247F678800D27828;
 			packageReferences = (
 				389B004E247F67D200D27828 /* XCRemoteSwiftPackageReference "swift-benchmark" */,
-				389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */,
-				38F9805F249BEFA400703912 /* XCRemoteSwiftPackageReference "jpeg" */,
-				3850958724B88EAE00FF7D6E /* XCRemoteSwiftPackageReference "libjpeg-swift" */,
+				38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */,
+				38216F8F24BCBDD000439027 /* XCRemoteSwiftPackageReference "libjpeg-swift" */,
+				38216F9224BCBE1D00439027 /* XCRemoteSwiftPackageReference "jpeg" */,
 			);
 			productRefGroup = 389B0044247F678900D27828 /* Products */;
 			projectDirPath = "";
@@ -362,10 +355,7 @@
 				DEVELOPMENT_TEAM = B298T8UF7G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/dynamic",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -381,10 +371,7 @@
 				DEVELOPMENT_TEAM = B298T8UF7G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = "";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/dynamic",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -415,9 +402,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3850958724B88EAE00FF7D6E /* XCRemoteSwiftPackageReference "libjpeg-swift" */ = {
+		38216F8F24BCBDD000439027 /* XCRemoteSwiftPackageReference "libjpeg-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Ayush517/libjpeg-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		38216F9224BCBE1D00439027 /* XCRemoteSwiftPackageReference "jpeg" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kelvin13/jpeg";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tensorflow/swift-models";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -431,84 +434,78 @@
 				kind = branch;
 			};
 		};
-		389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "http://github.com/tensorflow/swift-models";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		38F9805F249BEFA400703912 /* XCRemoteSwiftPackageReference "jpeg" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Ayush517/jpeg";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3850958824B88EAE00FF7D6E /* libjpeg-swift */ = {
+		38216F9024BCBDD000439027 /* libjpeg-swift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3850958724B88EAE00FF7D6E /* XCRemoteSwiftPackageReference "libjpeg-swift" */;
+			package = 38216F8F24BCBDD000439027 /* XCRemoteSwiftPackageReference "libjpeg-swift" */;
 			productName = "libjpeg-swift";
+		};
+		38216F9324BCBE1D00439027 /* jpeg */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38216F9224BCBE1D00439027 /* XCRemoteSwiftPackageReference "jpeg" */;
+			productName = jpeg;
+		};
+		38541D4724BAC583001DAF15 /* ImageClassificationModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = ImageClassificationModels;
+		};
+		38541D4924BAC583001DAF15 /* TextModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = TextModels;
+		};
+		38541D4B24BAC583001DAF15 /* MiniGo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = MiniGo;
+		};
+		38541D4D24BAC583001DAF15 /* ModelSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = ModelSupport;
+		};
+		38541D4F24BAC583001DAF15 /* Batcher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = Batcher;
+		};
+		38541D5124BAC583001DAF15 /* TrainingLoop */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = TrainingLoop;
+		};
+		38541D5324BAC583001DAF15 /* FastStyleTransfer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = FastStyleTransfer;
+		};
+		38541D5524BAC583001DAF15 /* Checkpoints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = Checkpoints;
+		};
+		38541D5724BAC583001DAF15 /* RecommendationModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = RecommendationModels;
+		};
+		38541D5924BAC583001DAF15 /* Datasets */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = Datasets;
+		};
+		38541D5B24BAC583001DAF15 /* VideoClassificationModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38541D4624BAC583001DAF15 /* XCRemoteSwiftPackageReference "swift-models" */;
+			productName = VideoClassificationModels;
 		};
 		389B004F247F67D200D27828 /* Benchmark */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 389B004E247F67D200D27828 /* XCRemoteSwiftPackageReference "swift-benchmark" */;
 			productName = Benchmark;
-		};
-		389B0052247F693600D27828 /* VideoClassificationModels */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = VideoClassificationModels;
-		};
-		389B0054247F693600D27828 /* ImageClassificationModels */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = ImageClassificationModels;
-		};
-		389B0056247F693600D27828 /* MiniGo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = MiniGo;
-		};
-		389B0058247F693600D27828 /* ModelSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = ModelSupport;
-		};
-		389B005A247F693600D27828 /* Batcher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = Batcher;
-		};
-		389B005C247F693600D27828 /* FastStyleTransfer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = FastStyleTransfer;
-		};
-		389B005E247F693600D27828 /* RecommendationModels */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = RecommendationModels;
-		};
-		389B0060247F693600D27828 /* Datasets */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = Datasets;
-		};
-		389B0062247F693600D27828 /* TextModels */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 389B0051247F693600D27828 /* XCRemoteSwiftPackageReference "swift-models" */;
-			productName = TextModels;
-		};
-		38F98060249BEFA400703912 /* jpeg */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38F9805F249BEFA400703912 /* XCRemoteSwiftPackageReference "jpeg" */;
-			productName = jpeg;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
