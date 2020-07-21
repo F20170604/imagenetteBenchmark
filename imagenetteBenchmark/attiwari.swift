@@ -2,8 +2,9 @@
 //  attiwari.swift
 //  imagenetteBenchmark
 //
-//  Created by Ayush Agrawal on 03/06/20.
-//  Copyright © 2020 Ayush Agrawal. All rights reserved.
+//  Created by Ayushi Tiwari on 03/06/20.
+//  Copyright © 2020 Ayushi Tiwari. All rights reserved.
+//  All code in this file is written by Ayushi Tiwari and belongs to her. Copied here just for testing and debugging purposes.
 //
 /**
 import Foundation
