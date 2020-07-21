@@ -54,7 +54,6 @@
 		389B0065247F69CF00D27828 /* pilBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pilBenchmark.swift; sourceTree = "<group>"; };
 		38C6A3E024B824A100C45B24 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = "../libjpeg-swift/jpeg-turbo/libjpeg.a"; sourceTree = "<group>"; };
 		38C6A3E124B824A100C45B24 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "../libjpeg-swift/jpeg-turbo/libturbojpeg.a"; sourceTree = "<group>"; };
-		38CE0ADE24C0D28200A7304C /* libjpeg-swift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "libjpeg-swift"; path = "../libjpeg-swift"; sourceTree = "<group>"; };
 		38E8557D24997DA200522C2A /* jpegBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jpegBenchmark.swift; sourceTree = "<group>"; };
 		38E8557F2499816300522C2A /* jpegImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jpegImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +86,6 @@
 		389B003A247F678800D27828 = {
 			isa = PBXGroup;
 			children = (
-				38CE0ADE24C0D28200A7304C /* libjpeg-swift */,
 				389B0045247F678900D27828 /* imagenetteBenchmark */,
 				389B0044247F678900D27828 /* Products */,
 				389B0064247F694300D27828 /* Frameworks */,

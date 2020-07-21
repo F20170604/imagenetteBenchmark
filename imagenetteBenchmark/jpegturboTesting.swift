@@ -28,7 +28,7 @@ func test3() {
 //    let loadedTensor = Tensor<UInt8>(shape: [Int(height), Int(width), 3], scalars: data)
 //    var imgTensor = Tensor<Float>(loadedTensor)
 //    imgTensor /= 255.0
-    //showTensorImage(imgTensor)
+//    showTensorImage(imgTensor)
     
     
     let path3 = "/Users/ayush517/Downloads/savedBoooya.ppm"
