@@ -153,25 +153,25 @@ public func tjJPEGLoadCompressedImage2( filename: UnsafePointer<Int8>?, width: i
     pixelFormat = -1
  
     /* Read the JPEG file into memory. */
-    var jpegFile = fopen(filename, "rb");
-    fseek(jpegFile, 0, SEEK_END);
-    let size = ftell(jpegFile);
-    fseek(jpegFile, 0, SEEK_SET);
-    let jpegSize = CUnsignedLongLong(size);
+    var jpegFile = fopen(filename, "rb")
+    fseek(jpegFile, 0, SEEK_END)
+    let size = ftell(jpegFile)
+    fseek(jpegFile, 0, SEEK_SET)
+    let jpegSize = CUnsignedLongLong(size)
     var jpegBuf = (tjAlloc(Int32(jpegSize)))
-    fread(jpegBuf, Int(jpegSize), 1, jpegFile);
-    fclose(jpegFile);
-    jpegFile = nil;
+    fread(jpegBuf, Int(jpegSize), 1, jpegFile)
+    fclose(jpegFile)
+    jpegFile = nil
     
-    var tjInstance = tjInitDecompress();
+    var tjInstance = tjInitDecompress()
     tjDecompressHeader(tjInstance, jpegBuf, UInt(jpegSize), &width, &height)
     
     let imgBuf = tjAlloc(3 * width * height)
-    tjDecompress2(tjInstance, jpegBuf, UInt(jpegSize), imgBuf, width, 0, height, 0, 0);
-    tjFree(jpegBuf);
-    jpegBuf = nil;
-    tjDestroy(tjInstance);
-    tjInstance = nil;
+    tjDecompress2(tjInstance, jpegBuf, UInt(jpegSize), imgBuf, width, 0, height, 0, 0)
+    tjFree(jpegBuf)
+    jpegBuf = nil
+    tjDestroy(tjInstance)
+    tjInstance = nil
     
-    return imgBuf;
+    return imgBuf
 }
